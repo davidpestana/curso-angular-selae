@@ -1,0 +1,32 @@
+services:
+  angular:
+    build: 
+      context: ./
+    command: npm start
+    working_dir: /app
+    volumes:
+      - ./ejemploUno:/app/
+    user: 1000:1000
+    ports:
+      - 4200:4200
+  another:
+    build: 
+      context: ./
+    command: npm start
+    working_dir: /app
+    volumes:
+      - ./another:/app/
+    user: 1000:1000
+    ports:
+      - 4201:4200
+
+  routing:
+    build: 
+      context: ./
+    command: npm start
+    working_dir: /app
+    volumes:
+      - ./routing:/app/
+    user: 1000:1000
+    ports:
+      - 4202:4200
