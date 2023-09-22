@@ -6,6 +6,9 @@ cli-another:
 	docker compose run -it --rm another bash
 start:   ## start dev enviroment
 	docker compose up -d 
+	docker compose logs -f 
+logs:
+	docker compose logs -f
 stop:
 	docker compose down --remove-orphans
 build:
